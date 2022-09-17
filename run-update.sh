@@ -1,0 +1,10 @@
+#!/bin/bash
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+###########- COLOR CODE -##############
+echo -e " [INFO] Mengunduh File Pembaruan"
+sleep 2
+wget -q -O /usr/bin/menu-bot "https://raw.githubusercontent.com/ryz-code/autoscript-vpn/master/update/menu-bot.sh" && chmod +x /usr/bin/menu-bot
+echo -e " [INFO] Perbarui Berhasil"
+sleep 2
+exit
