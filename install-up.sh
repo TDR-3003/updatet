@@ -16,7 +16,7 @@ sleep 2
 echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Downloading New Script"
 # wget -q -O /usr/bin/FILENAME "https://raw.githubusercontent.com/kamunikan/update/main/update_file/FILENAME" && chmod +x /usr/bin/FILENAME
 
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/ryz-code/update/master/update_file/menu.sh" && chmod +x /usr/bin/menu
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/ryz-code/update/master/update-file/menu.sh" && chmod +x /usr/bin/menu
 sleep 2
 echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Download Changelog File"
 #wget -q -O /root/clog.txt "https://raw.githubusercontent.com/SSHSEDANG4/update/main/update_file/clog.txt" && chmod +x /root/clog.txt
