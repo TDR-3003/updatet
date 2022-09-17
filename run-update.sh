@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 echo -e " [INFO] Mengunduh File Pembaruan"
 sleep 2
-wget -q -O /usr/bin/menu-bot "https://raw.githubusercontent.com/ryz-code/autoscript-vpn/master/update/menu-bot.sh" && chmod +x /usr/bin/menu-bot
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/ryz-code/autoscript-vpn/master/update/menu.sh" && chmod +x /usr/bin/menu
 echo -e " [INFO] Perbarui Berhasil"
 sleep 2
 exit
