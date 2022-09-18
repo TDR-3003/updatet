@@ -18,6 +18,7 @@ echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Downloading New Script"
 #wget -q -O /usr/bin/FILENAME "https://raw.githubusercontent.com/ryz-code/update/master/update_file/FILENAME" && chmod +x /usr/bin/FILENAME
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/ryz-code/update/master/update-file/menu.sh" && chmod +x /usr/bin/menu
 sleep 2
+rm install-up.sh
 echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Download Changelog File"
 wget -q -O /root/changelog.txt "https://raw.githubusercontent.com/ryz-code/update/master/update_file/changelog.txt" && chmod +x /root/changelog.txt
 echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Read Clog? ./root/clog.txt"
