@@ -11,21 +11,14 @@ export COLBG1="$(cat /etc/ryzvpn/theme/$colornow | grep -w "BG" | cut -d: -f2|se
 ###########- END COLOR CODE -##########
 
 echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Remove Old Script"
-#rm /usr/bin/menu
-rm /usr/local/bin/ws-dropbear
-rm /usr/local/bin/ws-stunnel
-#rm /etc/systemd/system/ws-dropbear.service
-#rm /etc/systemd/system/ws-stunnel.service
+rm /usr/bin/menu
 
 sleep 2
 echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Downloading New Script"
-# wget -q -O /usr/bin/FILENAME "https://raw.githubusercontent.com/kamunikan/update/main/update_file/FILENAME" && chmod +x /usr/bin/FILENAME
-
-#wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/ryz-code/update/master/update-file/menu.sh" && chmod +x /usr/bin/menu
-wget -q -O /usr/local/bin/ws-dropbear "https://raw.githubusercontent.com/ryz-code/update/master/dropbear-ws.py" && chmod +x /usr/local/bin/ws-dropbear
-wget -q -O /usr/local/bin/ws-stunnel "https://raw.githubusercontent.com/ryz-code/update/master/ws-stunnel" && chmod +x /usr/local/bin/ws-dropbear
+#wget -q -O /usr/bin/FILENAME "https://raw.githubusercontent.com/ryz-code/update/master/update_file/FILENAME" && chmod +x /usr/bin/FILENAME
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/ryz-code/update/master/update-file/menu.sh" && chmod +x /usr/bin/menu
 sleep 2
 echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Download Changelog File"
-#wget -q -O /root/clog.txt "https://raw.githubusercontent.com/SSHSEDANG4/update/main/update_file/clog.txt" && chmod +x /root/clog.txt
+wget -q -O /root/changelog.txt "https://raw.githubusercontent.com/ryz-code/update/master/update_file/changelog.txt" && chmod +x /root/changelog.txt
 echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Read Clog? ./root/clog.txt"
 sleep 2
