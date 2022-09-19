@@ -194,7 +194,7 @@ fi
 myver="$(cat /opt/.ver)"
 
 if [[ $serverV > $myver ]]; then
-echo -e "${COLOR1}┃$NC${COLOR1}[07]${NC} • MENU THEMES        [${COLOR1}14${NC}] • UPDATE TO V$serverV         ${COLOR1}┃${NC}"
+echo -e "${COLOR1}┃${NC}[${COLOR1}07${NC}] • MENU THEMES        [${COLOR1}14${NC}] • UPDATE TO V$serverV         ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 up2u="updatews"
 else
@@ -205,6 +205,9 @@ DATE=$(date +'%d %B %Y')
 datediff() {
     d1=$(date -d "$1" +%s)
     d2=$(date -d "$2" +%s)
+    echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
+    echo -e "${COLOR1}$┃${NC} ${COLBG1}                  • USER INFORMATION •                  ${COLOR1}┃${NC}$"
+    echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
     echo -e "${COLOR1}┃${NC}${COLOR1}Expiry In   :${NC} $(( (d1 - d2) / 86400 )) Days"
 }
 mai="datediff "$Exp" "$DATE""
