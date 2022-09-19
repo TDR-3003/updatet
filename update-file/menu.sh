@@ -75,19 +75,6 @@ fi
 export RED='\033[0;31m'
 export GREEN='\033[0;32m'
 
-#Download/Upload today
-dtoday="$(vnstat -i eth0 | grep "today" | awk '{print $2" "substr ($3, 1, 1)}')"
-utoday="$(vnstat -i eth0 | grep "today" | awk '{print $5" "substr ($6, 1, 1)}')"
-ttoday="$(vnstat -i eth0 | grep "today" | awk '{print $8" "substr ($9, 1, 1)}')"
-#Download/Upload yesterday
-dyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $2" "substr ($3, 1, 1)}')"
-uyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $5" "substr ($6, 1, 1)}')"
-tyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}')"
-#Download/Upload current month
-dmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $3" "substr ($4, 1, 1)}')"
-umon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $6" "substr ($7, 1, 1)}')"
-tmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}')"
-
 # // SSH Websocket Proxy
 ssh_ws=$( systemctl status ws-stunnel | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $ssh_ws == "running" ]]; then
@@ -188,11 +175,6 @@ echo -e "${COLOR1}┃$NC Memory Usage   : $uram / $tram"
 echo -e "${COLOR1}┃$NC ISP & City     : $ISP & $CITY"
 echo -e "${COLOR1}┃$NC Current Domain : $(cat /etc/xray/domain)"
 echo -e "${COLOR1}┃$NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
-echo -e "\e[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\e[m"
-echo -e "\e[0;31mTRAFFIC         TODAY        YESTERDAY      MONTH\e[m"
-echo -e "\e[0;31mDownload\e[m        $dtoday G       $dyest G         $dmon G"
-echo -e "\e[0;31mUpload\e[m          $utoday G        $uyest G        $umon G"
-echo -e "\e[0;31mTotal\e[m           $ttoday G        $tyest G        $tmon G"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}"
 echo -e "${COLOR1}┃$NC ${COLBG1}                 • VPS PANEL MENU •                    ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
@@ -212,7 +194,7 @@ fi
 myver="$(cat /opt/.ver)"
 
 if [[ $serverV > $myver ]]; then
-echo -e "${COLOR1}┃$NC${COLOR1}[07]${NC} • MENU THEMES        [${COLOR1}14${NC}] • UPDATE TO V$serverV          ${COLOR1}┃${NC}"
+echo -e "${COLOR1}┃$NC${COLOR1}[07]${NC} • MENU THEMES        [${COLOR1}14${NC}] • UPDATE TO V$serverV         ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 up2u="updatews"
 else
@@ -235,6 +217,8 @@ then
 else
     datediff "$Exp" "$DATE"
 fi;
+echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
+echo -e "${COLOR1}┃${NC} ${COLBG1}              AUTOSCRIPT BY : RYZXD                    ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 echo -ne "${COLOR1}┗━┫${NC} Select menu : "; read opt
 case $opt in
