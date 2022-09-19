@@ -46,7 +46,7 @@ CekTwo=$(cat /etc/.$Name.ini)
         res="Expired"
     fi
 else
-res="Permission Accepted..."
+res="Izin Diterima..."
 fi
 }
 
@@ -56,7 +56,7 @@ PERMISSION () {
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
-    res="Permission Denied!"
+    res="Izin Ditolak!"
     fi
     BURIQ
 }
@@ -101,59 +101,53 @@ fi
 
 function add-host(){
 clear
-echo -e "${COLOR1}┌─────────────────────────────────────────────────┐${NC}"
-echo -e "${COLOR1}│${NC} ${COLBG1}               • ADD VPS HOST •                ${NC} ${COLOR1}│$NC"
-echo -e "${COLOR1}└─────────────────────────────────────────────────┘${NC}"
-echo -e "${COLOR1}┌─────────────────────────────────────────────────┐${NC}"
-read -rp "  New Host Name : " -e host
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${COLBG1}                    • UPDATE SCRIPT VPS •                 ${NC}"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+read -rp "  Nama Host Baru : " -e host
 echo ""
 if [ -z $host ]; then
-echo -e "  [INFO] Type Your Domain/sub domain"
-echo -e "${COLOR1}└─────────────────────────────────────────────────┘${NC}"
+echo -e "  [INFO] Ketik Domain/sub domain Anda"
 echo ""
-read -n 1 -s -r -p "  Press any key to back on menu"
+read -n 1 -s -r -p "  Tekan tombol apa saja untuk kembali ke menu"
 menu
 else
-echo "IP=$host" > /var/lib/ryzvpn-premium/ipvps.conf
+echo "IP=$host" > /var/lib/ryzvpn-premiun/ipvps.conf
 echo ""
-echo "  [INFO] Dont forget to renew cert"
+echo "  [INFO] Jangan lupa untuk memperbaharui cert"
 echo ""
-echo -e "${COLOR1}└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
-read -n 1 -s -r -p "  Press any key to Renew Cret"
+read -n 1 -s -r -p "  Tekan tombol apa saja untuk Perbarui Cert"
 crtxray
 fi
 }
 function updatews(){
 clear
 
-echo -e "${COLOR1}┌─────────────────────────────────────────────────┐${NC}"
-echo -e "${COLOR1}│${NC} ${COLBG1}            • UPDATE SCRIPT VPS •              ${NC} ${COLOR1}│$NC"
-echo -e "${COLOR1}└─────────────────────────────────────────────────┘${NC}"
-echo -e "${COLOR1}┌─────────────────────────────────────────────────┐${NC}"
-echo -e "${COLOR1}│${NC}  ${COLOR1}[INFO]${NC} Check for Script updates"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${COLBG1}                    • UPDATE SCRIPT VPS •                 ${NC}"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e " $COLOR1[INFO]${NC} Periksa Update Script"
 sleep 2
-wget -q -O /root/install-up.sh "https://raw.githubusercontent.com/ryz-code/update/master/install-up.sh" && chmod +x /root/install-up.sh
+wget -q -O /root/install_up.sh "https://raw.githubusercontent.com/ryz-code/update/master/install_up.sh" && chmod +x /root/install_up.sh
 sleep 2
-./install-up.sh
+./install_up.sh
 sleep 5
-rm /root/install-up.sh
+rm /root/install_up.sh
 rm /opt/.ver
 version_up=$( curl -sS https://raw.githubusercontent.com/ryz-code/update/master/version_up)
-echo "$version-up" > /opt/.ver
-echo -e "${COLOR1}│${NC}  ${COLOR1}[INFO]${NC} Successfully Up To Date!"
-echo -e "${COLOR1}└─────────────────────────────────────────────────┘${NC}"
-echo -e "${COLOR1}┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "${COLOR1}│${NC}               • RYZ STORE VPN •                 ${COLOR1}│"
-echo -e "${COLOR1}└─────────────────────────────────────────────────┘${NC}"
+echo "$version_up" > /opt/.ver
+echo -e " $COLOR1[INFO]${NC} Berhasil Update Ke Versi Terbaru!"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
-read -n 1 -s -r -p "  Press any key to back on menu"
+read -n 1 -s -r -p "  Tekan tombol apa saja untuk kembali ke menu"
 menu
 }
 clear
-echo -e "${COLOR1}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}"
-echo -e "${COLOR1}┃$NC ${COLBG1}                 • SYTEM INFORMATION •                 ${COLOR1}┃${NC}"
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${COLBG1}                    • VPS PANEL MENU •                    ${NC}"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
@@ -161,42 +155,43 @@ cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
 serverV=$( curl -sS https://raw.githubusercontent.com/ryz-code/update/master/version_up)
 if [ "$Isadmin" = "ON" ]; then
-uis="${GREEN}Premium User$NC"
+uis="${GREEN}Pengguna Premium$NC"
 else
-uis="${RED}Free Version$NC"
+uis="${RED}Trial$NC"
 fi
-echo -e " ${COLOR1}User Roles     : $uis"
+echo -e "User Status     : $uis"
 if [ "$cekup" = "day" ]; then
-echo -e " ${COLOR1}System Uptime  : $uphours $upminutes $uptimecek"
+echo -e "System Uptime  : $uphours $upminutes $uptimecek"
 else
-echo -e " ${COLOR1}System Uptime  : $uphours $upminutes"
+echo -e "System Uptime  : $uphours $upminutes"
 fi
-echo -e " ${COLOR1}Memory Usage   : $uram / $tram"
-echo -e " ${COLOR1}ISP & City     : $ISP & $CITY"
-echo -e " ${COLOR1}Current Domain : $(cat /etc/xray/domain)"
-echo -e " ${COLOR1}IP-VPS         : ${COLOR1}$IPVPS${NC}"
-echo -e "${COLOR1}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}"
-echo -e "${COLOR1}┃$NC ${COLBG1}                 • VPS PANEL MENU •                    ${COLOR1}┃${NC}"
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -e "${COLOR1}┃$NC[${COLOR1}01${NC}] • MENU SSHWS         [${COLOR1}08${NC}] • MENU BACKUP            ${COLOR1}┃${NC}"   
-echo -e "${COLOR1}┃$NC[${COLOR1}02${NC}] • MENU VMESS         [${COLOR1}09${NC}] • MENU SETTINGS          ${COLOR1}┃${NC}"  
-echo -e "${COLOR1}┃$NC[${COLOR1}03${NC}] • MENU VLESS         [${COLOR1}10${NC}] • MENU BOT               ${COLOR1}┃${NC}"  
-echo -e "${COLOR1}┃$NC[${COLOR1}04${NC}] • MENU TROJAN        [${COLOR1}11${NC}] • ADD HOST/DOMAIN        ${COLOR1}┃${NC}"  
-echo -e "${COLOR1}┃$NC[${COLOR1}05${NC}] • MENU SS WS         [${COLOR1}12${NC}] • INFO                   ${COLOR1}┃${NC}"
+echo -e "Memory Usage   : $uram / $tram"
+echo -e "ISP & City     : $ISP & $CITY"
+echo -e "Current Domain : $(cat /etc/xray/domain)"
+echo -e "IP-VPS         : ${COLOR1}$IPVPS${NC}"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${COLBG1}                    • VPS PANEL MENU •                    ${NC}"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "  ${COLOR1}[01]${NC} • SSHWS          ${COLOR1}[08]${NC} • BACKUP "   
+echo -e "  ${COLOR1}[02]${NC} • VMESS          ${COLOR1}[09]${NC} • ADD HOST/DOMAIN   "  
+echo -e "  ${COLOR1}[03]${NC} • VLESS          ${COLOR1}[10]${NC} • RENEW CERT"  
+echo -e "  ${COLOR1}[04]${NC} • TROJAN         ${COLOR1}[11]${NC} • SETTINGS"  
+echo -e "  ${COLOR1}[05]${NC} • SS WS          ${COLOR1}[12]${NC} • INFO "
+echo -e "  ${COLOR1}[06]${NC} • SET DNS        ${COLOR1}[13]${NC} • REG IP     "
 if [ "$Isadmin" = "ON" ]; then
-echo -e "${COLOR1}┃${NC}[${COLOR1}06${NC}] • MENU SET DNS       [${COLOR1}13${NC}] • REG IP                 ${COLOR1}┃${NC}"
-echo -e "${COLOR1}┃$NC${COLOR1}[07]${NC} • MENU THEMES        [${COLOR1}14${NC}] • REBOOT VPS             ${COLOR1}┃${NC}"
+echo -e "  ${COLOR1}[07]${NC} • THEME          ${COLOR1}[14]${NC} • SET BOT  "
 ressee="menu-ip"
 bottt="menu-bot"
 else
 ressee="menu"
 bottt="menu"
 fi
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 myver="$(cat /opt/.ver)"
+
 if [[ $serverV > $myver ]]; then
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -e "${COLOR1}┃${NC}[${COLOR1}15${NC}] • UPDATE TO V$serverV                                   ┃"
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
+echo -e " ${COLOR1}[100]${NC} • UPDATE TO V$serverV"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 up2u="updatews"
 else
 up2u="menu"
@@ -206,24 +201,23 @@ DATE=$(date +'%d %B %Y')
 datediff() {
     d1=$(date -d "$1" +%s)
     d2=$(date -d "$2" +%s)
-    echo -e "${COLOR1}┃${NC}${COLOR1}Expiry In   :${NC} $(( (d1 - d2) / 86400 )) Days"
+    echo -e " Expiry In   : $(( (d1 - d2) / 86400 )) Days"
 }
 mai="datediff "$Exp" "$DATE""
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -e "${COLOR1}┃${NC} ${COLBG1}                  • USER INFORMATION •                 ${COLOR1}┃${NC}"
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -e "${COLOR1}┃${NC}${COLOR1}Version     :${NC} $(cat /opt/.ver) Latest Version"
-echo -e "${COLOR1}┃${NC}${COLOR1}Client Name :${NC} $Name"
+
+echo -e "Version     :${COLOR1} $(cat /opt/.ver) Latest Version${NC}"
+echo -e "Client Name : $Name"
 if [ $exp \> 1000 ];
 then
-    echo -e "${COLOR1}┃${NC}${COLOR1}License     :${NC} Lifetime"
+    echo -e "License     : Lifetime"
 else
     datediff "$Exp" "$DATE"
 fi;
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -e "${COLOR1}┃${NC} ${COLBG1}                 AUTOSCRIPT BY : RYZXD                 ${COLOR1}┃${NC}"
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -ne "${COLOR1}┗━┫${NC} Select menu : "; read opt
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━ BY ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${COLBG1}                    • RYZ STORE VPN •                     ${NC}"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e ""
+echo -ne " Pilih menu : "; read opt
 case $opt in
 01 | 1) clear ; menu-ssh ;;
 02 | 2) clear ; menu-vmess ;;
@@ -231,14 +225,15 @@ case $opt in
 04 | 4) clear ; menu-trojan ;;
 05 | 5) clear ; menu-ss ;;
 06 | 6) clear ; menu-dns ;;
-07 | 7) clear ; menu-theme ;;
-08 | 8) clear ; menu-backup ;;
+06 | 7) clear ; menu-theme ;;
+07 | 8) clear ; menu-backup ;;
 09 | 9) clear ; add-host ;;
 10) clear ; crtxray ;;
 11) clear ; menu-set ;;
 12) clear ; info ;;
 13) clear ; $ressee ;;
-14) clear ; $up2u ;;
+14) clear ; $bottt ;;
+100) clear ; $up2u ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu ;;
 esac
