@@ -21,5 +21,5 @@ sleep 2
 rm install-up.sh
 echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Download Changelog File"
 wget -q -O /root/changelog.txt "https://raw.githubusercontent.com/ryz-code/update/master/update_file/changelog.txt" && chmod +x /root/changelog.txt
-echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Read Clog? ./root/clog.txt"
+echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Read Changelog? ./root/changelog.txt"
 sleep 2
