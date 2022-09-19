@@ -178,13 +178,13 @@ echo -e "${COLOR1}┃$NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}"
 echo -e "${COLOR1}┃$NC ${COLBG1}                 • VPS PANEL MENU •                    ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -e "${COLOR1}┃$NC[${COLOR1}01${NC}] • SSHWS          [${COLOR1}08${NC}] • BACKUP "   
-echo -e "${COLOR1}┃$NC[${COLOR1}02${NC}] • VMESS          [${COLOR1}09${NC}] • ADD HOST/DOMAIN   "  
-echo -e "${COLOR1}┃$NC[${COLOR1}03${NC}] • VLESS          [${COLOR1}10${NC}] • RENEW CERT"  
-echo -e "${COLOR1}┃$NC[${COLOR1}04${NC}] • TROJAN         [${COLOR1}11${NC}] • SETTINGS"  
-echo -e "${COLOR1}┃$NC[${COLOR1}05${NC}] • SS WS          [${COLOR1}12${NC}] • INFO "
+echo -e "${COLOR1}┃$NC[${COLOR1}01${NC}] • MENU SSHWS         [${COLOR1}08${NC}] • MENU BACKUP            ┃"   
+echo -e "${COLOR1}┃$NC[${COLOR1}02${NC}] • MENU VMESS         [${COLOR1}09${NC}] • MENU SETTINGS          ┃"  
+echo -e "${COLOR1}┃$NC[${COLOR1}03${NC}] • MENU VLESS         [${COLOR1}10${NC}] • MENU BOT               ┃"  
+echo -e "${COLOR1}┃$NC[${COLOR1}04${NC}] • MENU TROJAN        [${COLOR1}11${NC}] • ADD HOST/DOMAIN        ┃"  
+echo -e "${COLOR1}┃$NC[${COLOR1}05${NC}] • MENU SS WS         [${COLOR1}12${NC}] • INFO                   ┃"
 if [ "$Isadmin" = "ON" ]; then
-echo -e "${COLOR1}┃$NC [${COLOR1}06${NC}] • SET DNS        ${COLOR1}[13]${NC} • REG IP     "
+echo -e "${COLOR1}┃$NC[${COLOR1}06${NC}] • MENU SET DNS       [${COLOR1}13${NC}] • REG IP                 ┃"
 ressee="menu-ip"
 bottt="menu-bot"
 else
@@ -194,8 +194,7 @@ fi
 myver="$(cat /opt/.ver)"
 
 if [[ $serverV > $myver ]]; then
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -e "${COLOR1}┃$NC ${COLOR1}[100]${NC} • UPDATE TO V$serverV                                 ${COLOR1}┃${NC}"
+echo -e "${COLOR1}┃$NC${COLOR1}[07]${NC} • MENU THEMES        [${COLOR1}14${NC}] • UPDATE TO V$1.2          ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 up2u="updatews"
 else
@@ -227,8 +226,8 @@ case $opt in
 04 | 4) clear ; menu-trojan ;;
 05 | 5) clear ; menu-ss ;;
 06 | 6) clear ; menu-dns ;;
-06 | 7) clear ; menu-theme ;;
-07 | 8) clear ; menu-backup ;;
+07 | 7) clear ; menu-theme ;;
+08 | 8) clear ; menu-backup ;;
 09 | 9) clear ; add-host ;;
 10) clear ; crt ;;
 11) clear ; menu-set ;;
