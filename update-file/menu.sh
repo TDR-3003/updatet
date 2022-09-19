@@ -210,7 +210,7 @@ datediff() {
 }
 mai="datediff "$Exp" "$DATE""
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -e "${COLOR1}┃${NC} ${COLBG1}                  • USER INFORMATION •                  ${COLOR1}┃${NC}"
+echo -e "${COLOR1}┃${NC} ${COLBG1}                  • USER INFORMATION •                 ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 echo -e "${COLOR1}┃${NC}${COLOR1}Version     :${NC} $(cat /opt/.ver) Latest Version"
 echo -e "${COLOR1}┃${NC}${COLOR1}Client Name :${NC} $Name"
