@@ -175,16 +175,15 @@ echo -e "${COLOR1}┃$NC Memory Usage   : $uram / $tram"
 echo -e "${COLOR1}┃$NC ISP & City     : $ISP & $CITY"
 echo -e "${COLOR1}┃$NC Current Domain : $(cat /etc/xray/domain)"
 echo -e "${COLOR1}┃$NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}"
 echo -e "${COLOR1}┃$NC ${COLBG1}                 • VPS PANEL MENU •                    ${NC}┃"
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫"
+echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 echo -e "${COLOR1}┃$NC [${COLOR1}01${NC}] • SSHWS          [${COLOR1}08${NC}] • BACKUP "   
 echo -e "${COLOR1}┃$NC [${COLOR1}02${NC}] • VMESS          [${COLOR1}09${NC}] • ADD HOST/DOMAIN   "  
 echo -e "${COLOR1}┃$NC [${COLOR1}03${NC}] • VLESS          [${COLOR1}10${NC}] • RENEW CERT"  
 echo -e "${COLOR1}┃$NC [${COLOR1}04${NC}] • TROJAN         [${COLOR1}11${NC}] • SETTINGS"  
 echo -e "${COLOR1}┃$NC [${COLOR1}05${NC}] • SS WS          [${COLOR1}12${NC}] • INFO "
 if [ "$Isadmin" = "ON" ]; then
-echo -e "                                                  ${COLOR1}│$NC"
 echo -e "${COLOR1}┃$NC [${COLOR1}06${NC}] • SET DNS        ${COLOR1}[13]${NC} • REG IP     "
 ressee="menu-ip"
 bottt="menu-bot"
@@ -195,9 +194,9 @@ fi
 myver="$(cat /opt/.ver)"
 
 if [[ $serverV > $myver ]]; then
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫"
-echo -e "${COLOR1}┃$NC ${COLOR1}[100]${NC} • UPDATE TO V$serverV" 
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫"
+echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
+echo -e "${COLOR1}┃$NC ${COLOR1}[100]${NC} • UPDATE TO V$serverV    ${COLOR1}┃${NC}" 
+echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 up2u="updatews"
 else
 up2u="menu"
@@ -211,7 +210,6 @@ datediff() {
 }
 mai="datediff "$Exp" "$DATE""
 
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫"
 echo -e "${COLOR1}Version     :${NC} $(cat /opt/.ver) Latest Version"
 echo -e "${COLOR1}Client Name :${NC} $Name"
 if [ $exp \> 1000 ];
@@ -220,11 +218,8 @@ then
 else
     datediff "$Exp" "$DATE"
 fi;
-echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫"
-echo -e "${COLBG1}┃                    • RYZ STORE VPN •                     ┃${NC}"
-echo -e "${COLOR1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e ""
-echo -ne " Select menu : "; read opt
+echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
+echo -ne "${COLOR1}┗━┫${NC} Select menu : "; read opt
 case $opt in
 01 | 1) clear ; menu-ssh ;;
 02 | 2) clear ; menu-vmess ;;
