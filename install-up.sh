@@ -17,7 +17,8 @@ rm /usr/bin/menu
 sleep 2
 echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Downloading New Script"
 #wget -q -O /usr/bin/FILENAME "https://raw.githubusercontent.com/ryz-code/update/master/update_file/FILENAME" && chmod +x /usr/bin/FILENAME
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/ryz-code/update/master/update-file/menu.sh" && chmod +x /usr/bin/menu
+#wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/ryz-code/update/master/update-file/menu.sh" && chmod +x /usr/bin/menu
+wget -q -O /usr/bin/menu "https://gist.githubusercontent.com/ryz-code/raw/552f1f032594f63d32d59c43a71ce592287c7832/menu.sh" && chmod +x /usr/bin/menu
 sleep 2
 echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Download Changelog File"
 wget -q -O /root/changelog.txt "https://raw.githubusercontent.com/ryz-code/update/master/update_file/changelog.txt" && chmod +x /root/changelog.txt
