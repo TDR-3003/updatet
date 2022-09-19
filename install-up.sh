@@ -11,7 +11,6 @@ export COLBG1="$(cat /etc/ryzvpn/theme/$colornow | grep -w "BG" | cut -d: -f2|se
 ###########- END COLOR CODE -##########
 
 echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Remove Old Script"
-rm /root/install-up.sh
 rm /usr/bin/menu
 
 sleep 2
