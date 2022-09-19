@@ -165,26 +165,26 @@ uis="${GREEN}Premium User$NC"
 else
 uis="${RED}Free Version$NC"
 fi
-echo -e "${COLOR1}┃$NC User Roles     : $uis"
+echo -e "${COLOR1}User Roles     : $uis"
 if [ "$cekup" = "day" ]; then
-echo -e "${COLOR1}┃$NC System Uptime  : $uphours $upminutes $uptimecek"
+echo -e " ${COLOR1}System Uptime  : $uphours $upminutes $uptimecek"
 else
-echo -e "${COLOR1}┃$NC System Uptime  : $uphours $upminutes"
+echo -e " ${COLOR1}System Uptime  : $uphours $upminutes"
 fi
-echo -e "${COLOR1}┃$NC Memory Usage   : $uram / $tram"
-echo -e "${COLOR1}┃$NC ISP & City     : $ISP & $CITY"
-echo -e "${COLOR1}┃$NC Current Domain : $(cat /etc/xray/domain)"
-echo -e "${COLOR1}┃$NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
+echo -e " ${COLOR1}Memory Usage   : $uram / $tram"
+echo -e " ${COLOR1}ISP & City     : $ISP & $CITY"
+echo -e " ${COLOR1}Current Domain : $(cat /etc/xray/domain)"
+echo -e " ${COLOR1}IP-VPS         : ${COLOR1}$IPVPS${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}"
 echo -e "${COLOR1}┃$NC ${COLBG1}                 • VPS PANEL MENU •                    ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -e "${COLOR1}┃$NC[${COLOR1}01${NC}] • MENU SSHWS         [${COLOR1}08${NC}] • MENU BACKUP            ┃"   
-echo -e "${COLOR1}┃$NC[${COLOR1}02${NC}] • MENU VMESS         [${COLOR1}09${NC}] • MENU SETTINGS          ┃"  
-echo -e "${COLOR1}┃$NC[${COLOR1}03${NC}] • MENU VLESS         [${COLOR1}10${NC}] • MENU BOT               ┃"  
-echo -e "${COLOR1}┃$NC[${COLOR1}04${NC}] • MENU TROJAN        [${COLOR1}11${NC}] • ADD HOST/DOMAIN        ┃"  
-echo -e "${COLOR1}┃$NC[${COLOR1}05${NC}] • MENU SS WS         [${COLOR1}12${NC}] • INFO                   ┃"
+echo -e "${COLOR1}┃$NC[${COLOR1}01${NC}] • MENU SSHWS         [${COLOR1}08${NC}] • MENU BACKUP            ${COLOR1}┃${NC}"   
+echo -e "${COLOR1}┃$NC[${COLOR1}02${NC}] • MENU VMESS         [${COLOR1}09${NC}] • MENU SETTINGS          ${COLOR1}┃${NC}"  
+echo -e "${COLOR1}┃$NC[${COLOR1}03${NC}] • MENU VLESS         [${COLOR1}10${NC}] • MENU BOT               ${COLOR1}┃${NC}"  
+echo -e "${COLOR1}┃$NC[${COLOR1}04${NC}] • MENU TROJAN        [${COLOR1}11${NC}] • ADD HOST/DOMAIN        ${COLOR1}┃${NC}"  
+echo -e "${COLOR1}┃$NC[${COLOR1}05${NC}] • MENU SS WS         [${COLOR1}12${NC}] • INFO                   ${COLOR1}┃${NC}"
 if [ "$Isadmin" = "ON" ]; then
-echo -e "${COLOR1}┃$NC[${COLOR1}06${NC}] • MENU SET DNS       [${COLOR1}13${NC}] • REG IP                 ┃"
+echo -e "${COLOR1}┃$NC[${COLOR1}06${NC}] • MENU SET DNS       [${COLOR1}13${NC}] • REG IP                 ${COLOR1}┃${NC}"
 ressee="menu-ip"
 bottt="menu-bot"
 else
@@ -205,13 +205,12 @@ DATE=$(date +'%d %B %Y')
 datediff() {
     d1=$(date -d "$1" +%s)
     d2=$(date -d "$2" +%s)
-    echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-    echo -e "${COLOR1}$┃${NC} ${COLBG1}                  • USER INFORMATION •                  ${COLOR1}┃${NC}$"
-    echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
     echo -e "${COLOR1}┃${NC}${COLOR1}Expiry In   :${NC} $(( (d1 - d2) / 86400 )) Days"
 }
 mai="datediff "$Exp" "$DATE""
-
+echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
+echo -e "${COLOR1}$┃${NC} ${COLBG1}                  • USER INFORMATION •                  ${COLOR1}┃${NC}$"
+echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 echo -e "${COLOR1}┃${NC}${COLOR1}Version     :${NC} $(cat /opt/.ver) Latest Version"
 echo -e "${COLOR1}┃${NC}${COLOR1}Client Name :${NC} $Name"
 if [ $exp \> 1000 ];
