@@ -152,7 +152,7 @@ menu
 }
 clear
 echo -e "${COLOR1}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}"
-echo -e "${COLOR1}┃$NC ${COLBG1}                 • SYTEM INFORMATION •                 ${NC}┃"
+echo -e "${COLOR1}┃$NC ${COLBG1}                 • SYTEM INFORMATION •                 ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
@@ -176,13 +176,13 @@ echo -e "${COLOR1}┃$NC ISP & City     : $ISP & $CITY"
 echo -e "${COLOR1}┃$NC Current Domain : $(cat /etc/xray/domain)"
 echo -e "${COLOR1}┃$NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}"
-echo -e "${COLOR1}┃$NC ${COLBG1}                 • VPS PANEL MENU •                    ${NC}┃"
+echo -e "${COLOR1}┃$NC ${COLBG1}                 • VPS PANEL MENU •                    ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -e "${COLOR1}┃$NC [${COLOR1}01${NC}] • SSHWS          [${COLOR1}08${NC}] • BACKUP "   
-echo -e "${COLOR1}┃$NC [${COLOR1}02${NC}] • VMESS          [${COLOR1}09${NC}] • ADD HOST/DOMAIN   "  
-echo -e "${COLOR1}┃$NC [${COLOR1}03${NC}] • VLESS          [${COLOR1}10${NC}] • RENEW CERT"  
-echo -e "${COLOR1}┃$NC [${COLOR1}04${NC}] • TROJAN         [${COLOR1}11${NC}] • SETTINGS"  
-echo -e "${COLOR1}┃$NC [${COLOR1}05${NC}] • SS WS          [${COLOR1}12${NC}] • INFO "
+echo -e "${COLOR1}┃$NC[${COLOR1}01${NC}] • SSHWS          [${COLOR1}08${NC}] • BACKUP "   
+echo -e "${COLOR1}┃$NC[${COLOR1}02${NC}] • VMESS          [${COLOR1}09${NC}] • ADD HOST/DOMAIN   "  
+echo -e "${COLOR1}┃$NC[${COLOR1}03${NC}] • VLESS          [${COLOR1}10${NC}] • RENEW CERT"  
+echo -e "${COLOR1}┃$NC[${COLOR1}04${NC}] • TROJAN         [${COLOR1}11${NC}] • SETTINGS"  
+echo -e "${COLOR1}┃$NC[${COLOR1}05${NC}] • SS WS          [${COLOR1}12${NC}] • INFO "
 if [ "$Isadmin" = "ON" ]; then
 echo -e "${COLOR1}┃$NC [${COLOR1}06${NC}] • SET DNS        ${COLOR1}[13]${NC} • REG IP     "
 ressee="menu-ip"
@@ -195,7 +195,7 @@ myver="$(cat /opt/.ver)"
 
 if [[ $serverV > $myver ]]; then
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -e "${COLOR1}┃$NC ${COLOR1}[100]${NC} • UPDATE TO V$serverV    ${COLOR1}┃${NC}" 
+echo -e "${COLOR1}┃$NC ${COLOR1}[100]${NC} • UPDATE TO V$serverV                                 ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 up2u="updatews"
 else
@@ -214,7 +214,7 @@ echo -e "${COLOR1}┃${NC}${COLOR1}Version     :${NC} $(cat /opt/.ver) Latest Ve
 echo -e "${COLOR1}┃${NC}${COLOR1}Client Name :${NC} $Name"
 if [ $exp \> 1000 ];
 then
-    echo -e "${COLOR1}License     :${NC} Lifetime"
+    echo -e "${COLOR1}┃${NC}${COLOR1}License     :${NC} Lifetime"
 else
     datediff "$Exp" "$DATE"
 fi;
