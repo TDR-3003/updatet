@@ -184,7 +184,7 @@ echo -e "${COLOR1}┃$NC[${COLOR1}03${NC}] • MENU VLESS         [${COLOR1}10${
 echo -e "${COLOR1}┃$NC[${COLOR1}04${NC}] • MENU TROJAN        [${COLOR1}11${NC}] • ADD HOST/DOMAIN        ${COLOR1}┃${NC}"  
 echo -e "${COLOR1}┃$NC[${COLOR1}05${NC}] • MENU SS WS         [${COLOR1}12${NC}] • INFO                   ${COLOR1}┃${NC}"
 if [ "$Isadmin" = "ON" ]; then
-echo -e "${COLOR1}┃$NC[${COLOR1}06${NC}] • MENU SET DNS       [${COLOR1}13${NC}] • REG IP                 ${COLOR1}┃${NC}"
+echo -e "${COLOR1}┃${NC}[${COLOR1}06${NC}] • MENU SET DNS       [${COLOR1}13${NC}] • REG IP                 ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┃${NC}[${COLOR1}07${NC}] • MENU THEMES        [${COLOR1}14${NC}] • UPDATE TO V$serverV         ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 ressee="menu-ip"
@@ -208,7 +208,7 @@ datediff() {
 }
 mai="datediff "$Exp" "$DATE""
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -e "${COLOR1}┃${NC} ${COLBG1}                  • USER INFORMATION •                  ${COLOR1}┃${NC}$"
+echo -e "${COLOR1}┃${NC} ${COLBG1}                  • USER INFORMATION •                  ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 echo -e "${COLOR1}┃${NC}${COLOR1}Version     :${NC} $(cat /opt/.ver) Latest Version"
 echo -e "${COLOR1}┃${NC}${COLOR1}Client Name :${NC} $Name"
