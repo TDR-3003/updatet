@@ -185,7 +185,7 @@ echo -e "${COLOR1}┃$NC[${COLOR1}04${NC}] • MENU TROJAN        [${COLOR1}11${
 echo -e "${COLOR1}┃$NC[${COLOR1}05${NC}] • MENU SS WS         [${COLOR1}12${NC}] • INFO                   ${COLOR1}┃${NC}"
 if [ "$Isadmin" = "ON" ]; then
 echo -e "${COLOR1}┃${NC}[${COLOR1}06${NC}] • MENU SET DNS       [${COLOR1}13${NC}] • REG IP                 ${COLOR1}┃${NC}"
-echo -e "${COLOR1}┃${NC}[${COLOR1}07${NC}] • MENU THEMES        [${COLOR1}14${NC}] • UPDATE TO V$serverV         ${COLOR1}┃${NC}"
+echo -e "${COLOR1}┃${NC}[${COLOR1}07${NC}] • MENU THEMES        [${COLOR1}14${NC}] • UPDATE TO V$         ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 ressee="menu-ip"
 bottt="menu-bot"
@@ -219,7 +219,7 @@ else
     datediff "$Exp" "$DATE"
 fi;
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -e "${COLOR1}┃${NC} ${COLBG1}              AUTOSCRIPT BY : RYZXD                    ${COLOR1}┃${NC}"
+echo -e "${COLOR1}┃${NC} ${COLBG1}                 AUTOSCRIPT BY : RYZXD                 ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 echo -ne "${COLOR1}┗━┫${NC} Select menu : "; read opt
 case $opt in
