@@ -165,7 +165,7 @@ uis="${GREEN}Premium User$NC"
 else
 uis="${RED}Free Version$NC"
 fi
-echo -e "${COLOR1}User Roles     : $uis"
+echo -e " ${COLOR1}User Roles     : $uis"
 if [ "$cekup" = "day" ]; then
 echo -e " ${COLOR1}System Uptime  : $uphours $upminutes $uptimecek"
 else
@@ -192,7 +192,6 @@ ressee="menu"
 bottt="menu"
 fi
 myver="$(cat /opt/.ver)"
-
 if [[ $serverV > $myver ]]; then
 echo -e "${COLOR1}┃${NC}[${COLOR1}07${NC}] • MENU THEMES        [${COLOR1}14${NC}] • UPDATE TO V$serverV         ${COLOR1}┃${NC}"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
@@ -209,7 +208,7 @@ datediff() {
 }
 mai="datediff "$Exp" "$DATE""
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
-echo -e "${COLOR1}$┃${NC} ${COLBG1}                  • USER INFORMATION •                  ${COLOR1}┃${NC}$"
+echo -e "${COLOR1}┃${NC} ${COLBG1}                  • USER INFORMATION •                  ${COLOR1}┃${NC}$"
 echo -e "${COLOR1}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
 echo -e "${COLOR1}┃${NC}${COLOR1}Version     :${NC} $(cat /opt/.ver) Latest Version"
 echo -e "${COLOR1}┃${NC}${COLOR1}Client Name :${NC} $Name"
